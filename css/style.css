@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "Barlow";
+    src: url("../fonts/barlow-semibold.woff2") format("woff2"), url("../fonts/barlow-semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url("../fonts/barlow-medium.woff2") format("woff2"), url("../fonts/barlow-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url("../fonts/barlow-regular.woff2") format("woff2"), url("../fonts/barlow-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url("../fonts/barlow-light.woff2") format("woff2"), url("../fonts/barlow-light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --main-bg: #e5e5e5;
+    --white: #ffffff;
+    --base-text: #000000;
+    --grey: #C4C4C4;
+    --bg-itemList: #E27BEB;
+    --bg-itemSearch: #E3E3E3;
+    --bg-itemHover: #65CDF9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--main-bg);
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+    color: var(--white);
+    cursor: pointer;
+    outline: none;
+}
+
+.container {
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.search-wrapper {
+    max-width: 500px;
+    padding: 60px 80px;
+    margin: 150px auto auto auto;
+    border-radius: 5px;
+    background-color: var(--grey);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.search {
+    width: 100%;
+    margin-bottom: 200px;
+    padding: 10px;
+    border: none;
+}
+
+.autocomplete-wrap {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-list__item {
+    padding: 5px 10px;
+    border: 1px solid var(--base-text);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.autocomplete-list__item:hover {
+    background-color: var(--bg-itemHover);
+}
+
+.list__item {
+    position: relative;
+    padding: 10px 16px;
+    border: 1px solid var(--base-text);
+    background-color: var(--bg-itemList);
+}
+
+.btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/cross-svgrepo-com.svg) no-repeat;
+}
